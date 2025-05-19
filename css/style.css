@@ -1,0 +1,525 @@
+/* Подключение шрифта Inter через Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+
+/* ========================== */
+/*        VARIABLES           */
+/* ========================== */
+:root {
+  --color-white: #ffffff;
+  --color-green-dark: #445547;
+  --color-black-dark: #18201a;
+  --color-green-bright: #42e237;
+  --color-white-10: rgba(255, 255, 255, 0.1);
+  --color-white-70: rgba(255, 255, 255, 0.7);
+  --font-main: 'Inter', sans-serif;
+  --transition: all 0.3s ease;
+}
+
+/* ========================== */
+/*         RESET              */
+/* ========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--1, radial-gradient(71.92% 52.63% at 50% 67.33%, #445547 0%, #18201A 100%));
+  color: var(--color-white);
+  overflow-x: hidden;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ========================== */
+/*         HEADER             */
+/* ========================== */
+.header {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+}
+
+.header__logo img {
+  height: 40px;
+}
+
+.header__cta {
+  color: var(--color-green-bright);
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.header__cta:hover {
+  opacity: 0.8;
+}
+
+/* ========================== */
+/*         HERO               */
+/* ========================== */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(2px);
+  background: var(--color-white-10);
+  padding: 20px 60px;
+  border-radius: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero__title {
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.hero__subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-white-70);
+  margin-bottom: 30px;
+}
+
+.hero__button {
+  display: inline-block;
+  padding: 16px 36px;
+  background-color: var(--color-green-bright);
+  color: var(--color-black-dark);
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.hero__button:hover {
+  filter: brightness(1.1);
+}
+
+/* ========================== */
+/*         STATS              */
+/* ========================== */
+.stats {
+  background-color: var(--color-white);
+  color: var(--color-black-dark);
+  text-align: center;
+  padding: 40px 0px 0px 0px;
+}
+
+.stats__title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.stats__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.stats__item {
+  background-color: var(--color-green-dark);
+  color: var(--color-white);
+  border-radius: 24px;
+  padding: 20px;
+}
+
+.stats__number {
+  font-size: 36px;
+  font-weight: 700;
+  display: block;
+}
+
+.stats__label {
+  font-size: 24px;
+  opacity: 0.7;
+}
+
+.stats__wallet {
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  gap: 180px;
+  flex-wrap: wrap;
+}
+
+.stats__wallet p {
+  font-size: 36px;
+  max-width: 480px;
+  font-weight: 400;
+  line-height: 1.4;
+  align-items: top;
+}
+
+.stats__wallet img {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  padding-bottom: 0px;
+}
+
+/* ========================== */
+/*         BENEFITS           */
+/* ========================== */
+.benefits {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 80px 0;
+}
+
+.benefits__item {
+  flex: 1 1 30%;
+  background-color: var(--color-green-dark);
+  border-radius: 24px;
+  padding: 24px;
+  color: var(--color-white);
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  min-width: 260px;
+  max-width: 360px;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Заголовок и подзаголовок */
+.benefits__item h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  z-index: 1;
+  position: relative;
+}
+
+.benefits__item p {
+  font-size: 16px;
+  color: var(--color-white-70);
+  margin-bottom: auto;
+  z-index: 1;
+  position: relative;
+}
+
+/* Картинка выходит за пределы карточки */
+.benefits__item img {
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 640px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+
+
+/* ========================== */
+/*       INTEGRATIONS         */
+/* ========================== */
+.integrations {
+  background-color: var(--color-white); /* белый фон */
+  text-align: center;
+  padding: 50px 0px;
+  overflow: hidden;
+}
+
+.integrations h2 {
+  color: var(--color-black-dark);
+  margin-bottom: 40px;
+}
+
+/* Обёртка, скрывающая лишнее */
+.integrations__track-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* Анимируемая дорожка с логотипами */
+.integrations__logos {
+  display: flex;
+  gap: 40px;
+  animation: scroll-left 25s linear infinite;
+  min-width: fit-content;
+}
+
+.integrations__logos img {
+  height: 40px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-101.3%);
+  }
+}
+
+
+
+
+/* ========================== */
+/*           FAQ              */
+/* ========================== */
+.faq h2 {
+  font-size: 36px;
+  margin: 40px 0px ;
+  text-align: center;
+}
+.faq__item {
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--color-white-10);
+}
+
+.faq__question {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--color-white);
+  font-size: 28px;
+  text-align: left;
+  padding: 12px 0;
+  cursor: pointer;
+  position: relative;
+  font-weight: 600;
+}
+
+.faq__question::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 12px;
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.faq__item.active .faq__question::after {
+  content: "−";
+}
+
+.faq__answer {
+  max-height: 0;
+  overflow: hidden;
+  color: var(--color-white-70);
+  font-size: 20px;
+  line-height: 1.5;
+  transition: max-height 0.4s ease;
+  padding-left: 0;
+}
+
+.faq__item.active .faq__answer {
+  max-height: 500px; /* ограничено, но достаточно */
+  margin-top: 8px;
+}
+
+
+/* ========================== */
+/*          FOOTER            */
+/* ========================== */
+.footer {
+  text-align: left;
+  font-size: 14px;
+  color: var(--color-white-70);
+  margin-bottom: 8vw;
+}
+
+.footer__info {
+  margin: 100px 0px;
+}
+
+.footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer__links h4 {
+  color: var(--color-white);
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.footer__links a {
+  display: block;
+  color: var(--color-white-70);
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 4px;
+  
+}
+
+.hero__button {
+  color: var(--color-white); /* или color: #ffffff; */
+}
+
+
+
+.footer__info {
+  position: relative;
+  margin: 100px 0px 200px 0px;
+}
+
+.footer__centered-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px; /* или подгони по размеру изображения */
+}
+
+.footer__centered-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.footer__centered-box .hero__button {
+  position: absolute;
+  z-index: 2;
+}
+
+.logo {
+  align-items: center;
+  gap: 12px; /* ← регулируй как нужно */
+}
+
+.logo img {
+  height: 50px; /* или под размер */
+  width: auto;
+}
+
+.logo p {
+  margin: 20px 0px 0px 0px;
+  color: var(--color-white-70);
+  font-size: 14px;
+}
+
+/* ========================== */
+/*         RESPONSIVE         */
+/* ========================== */
+@media (max-width: 768px) {
+  .hero__content {
+    padding: 30px 20px;
+  }
+
+  .hero__title {
+    font-size: 28px;
+  }
+
+  .hero__subtitle {
+    font-size: 16px;
+  }
+
+  .hero__button {
+    font-size: 18px;
+    padding: 14px 28px;
+  }
+
+  .header__cta {
+    font-size: 14px;
+  }
+
+  .header__logo img {
+    height: 32px;
+  }
+
+  .stats__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .benefits__item {
+    width: 100%;
+  }
+
+  .integrations__logos {
+    gap: 2vw;
+  }
+
+  .footer__info {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .faq {
+    padding: 0px;
+  }
+
+  .hero {
+  position: relative;
+  height: 480px;
+}
+
+.stats__wallet {
+  gap: 60px;
+}
+
+.footer__centered-box {
+  margin-bottom: 10vw;
+  min-height: 200px; /* или подгони по размеру изображения */
+}
+
+.footer__links {
+  display: flex;
+  justify-content: space-between;
+}
+}
