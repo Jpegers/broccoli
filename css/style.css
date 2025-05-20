@@ -437,6 +437,10 @@ img {
   z-index: 2;
 }
 
+
+
+
+
 .logo {
   align-items: center;
   gap: 12px; /* ← регулируй как нужно */
@@ -453,12 +457,29 @@ img {
   font-size: 14px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ========================== */
 /*         RESPONSIVE         */
 /* ========================== */
 @media (max-width: 768px) {
   .hero__content {
-    padding: 30px 20px;
+    padding: 20px 20px;
   }
 
   .hero__title {
@@ -466,7 +487,7 @@ img {
   }
 
   .hero__subtitle {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .hero__button {
@@ -521,5 +542,229 @@ img {
 .footer__links {
   display: flex;
   justify-content: space-between;
+}
+
+
+
+.stats__wallet p {
+  padding: 0px 40px;
+  font-size: 24px;
+}
+
+
+/* ========================== */
+/*           FAQ              */
+/* ========================== */
+.faq h2 {
+  font-size: 36px;
+  margin: 40px 0px ;
+  text-align: center;
+}
+.faq__item {
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--color-white-10);
+}
+
+.faq__question {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--color-white);
+  font-size: 24px;
+  text-align: left;
+  padding: 12px 0;
+  cursor: pointer;
+  position: relative;
+  font-weight: 600;
+}
+
+.faq__question::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 12px;
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.faq__item.active .faq__question::after {
+  content: "−";
+}
+
+.faq__answer {
+  max-height: 0;
+  overflow: hidden;
+  color: var(--color-white-70);
+  font-size: 14px;
+  line-height: 1.5;
+  transition: max-height 0.4s ease;
+  padding-left: 0;
+}
+
+.faq__item.active .faq__answer {
+  max-height: 500px; /* ограничено, но достаточно */
+  margin-top: 8px;
+}
+
+
+/* ========================== */
+/*         STATS              */
+/* ========================== */
+.stats {
+  background-color: var(--color-white);
+  color: var(--color-black-dark);
+  text-align: center;
+  padding: 40px 0px 0px 0px;
+}
+
+.stats__title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.stats__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.stats__item {
+  background-color: var(--color-green-dark);
+  color: var(--color-white);
+  border-radius: 24px;
+  width: 100%;
+}
+
+.stats__number {
+  font-size: 24px;
+  font-weight: 700;
+  padding-top: 10px;
+  display: block;
+}
+
+.stats__label {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.stats__wallet {
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.stats__wallet p {
+  font-size: 36px;
+  max-width: 480px;
+  font-weight: 400;
+  line-height: 1.4;
+  align-items: top;
+}
+
+.stats__wallet img {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  padding-bottom: 0px;
+}
+
+.benefits {
+  display: grid;
+  justify-content: center;
+}
+
+.benefits__item {
+  width: 350px;
+  height: 350px;
+}
+
+.benefits__item img {
+  width: 800px;
+}
+
+
+
+
+/* ========================== */
+/*          FOOTER            */
+/* ========================== */
+.footer {
+  text-align: left;
+  font-size: 24px;
+  color: var(--color-white-70);
+  padding: 0px;
+  margin-bottom: 8vw;
+}
+
+.footer__info {
+  margin: 0px 0px;
+}
+
+.footer__links {
+  display: grid;
+  
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer__links h4 {
+  color: var(--color-white);
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.footer__links a {
+  display: block;
+  color: var(--color-white-70);
+  text-decoration: none;
+  font-size: 18px;
+  margin-bottom: 16px;
+  
+}
+
+.hero__button {
+  color: var(--color-white); /* или color: #ffffff; */
+}
+
+
+
+.footer__info {
+  position: relative;
+  margin: 0px 0px 0px 0px;
+}
+
+.footer__centered-box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 240px; /* или подгони по размеру изображения */
+}
+
+.footer__centered-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.footer__centered-box .hero__button {
+  position: absolute;
+  z-index: 2;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 0px 0px 32px 0px;
+}
+
+.logo p {
+  font-size: 18px;
+  padding: 0px;
+  margin: 0px;
+  padding-left: 20px;
 }
 }
